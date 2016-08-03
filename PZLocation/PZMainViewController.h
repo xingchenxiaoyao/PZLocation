@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PZMainViewController.h
 //  PZLocation
 //
 //  Created by 赵朋 on 16/7/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PZMainViewController : UIViewController
 
 @end
-
