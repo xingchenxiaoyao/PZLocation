@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		75291F671D47115B00E9B12C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F661D47115B00E9B12C /* main.m */; };
 		75291F6A1D47115B00E9B12C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F691D47115B00E9B12C /* AppDelegate.m */; };
-		75291F6D1D47115B00E9B12C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F6C1D47115B00E9B12C /* ViewController.m */; };
-		75291F701D47115B00E9B12C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75291F6E1D47115B00E9B12C /* Main.storyboard */; };
 		75291F721D47115B00E9B12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75291F711D47115B00E9B12C /* Assets.xcassets */; };
 		75291F751D47115B00E9B12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75291F731D47115B00E9B12C /* LaunchScreen.storyboard */; };
 		75291F801D47115B00E9B12C /* PZLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F7F1D47115B00E9B12C /* PZLocationTests.m */; };
 		75291F8B1D47115B00E9B12C /* PZLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F8A1D47115B00E9B12C /* PZLocationUITests.m */; };
+		75291F9A1D4711C000E9B12C /* PZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75291F991D4711C000E9B12C /* PZMainViewController.m */; };
+		75FCDC721D503E0E003A054B /* PZMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCDC711D503E0E003A054B /* PZMapViewController.m */; };
+		75FCDC761D503E90003A054B /* PZAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 75FCDC751D503E90003A054B /* PZAnnotation.m */; };
+		75FCDC781D508494003A054B /* pay_way_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 75FCDC771D508494003A054B /* pay_way_selected.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +41,6 @@
 		75291F661D47115B00E9B12C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		75291F681D47115B00E9B12C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		75291F691D47115B00E9B12C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		75291F6B1D47115B00E9B12C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75291F6C1D47115B00E9B12C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		75291F6F1D47115B00E9B12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75291F711D47115B00E9B12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75291F741D47115B00E9B12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75291F761D47115B00E9B12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,14 @@
 		75291F861D47115B00E9B12C /* PZLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PZLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75291F8A1D47115B00E9B12C /* PZLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PZLocationUITests.m; sourceTree = "<group>"; };
 		75291F8C1D47115B00E9B12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75291F981D4711C000E9B12C /* PZMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZMainViewController.h; sourceTree = "<group>"; };
+		75291F991D4711C000E9B12C /* PZMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZMainViewController.m; sourceTree = "<group>"; };
+		75291F9B1D47124000E9B12C /* PZHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PZHeader.pch; sourceTree = "<group>"; };
+		75FCDC701D503E0E003A054B /* PZMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZMapViewController.h; sourceTree = "<group>"; };
+		75FCDC711D503E0E003A054B /* PZMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZMapViewController.m; sourceTree = "<group>"; };
+		75FCDC741D503E90003A054B /* PZAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PZAnnotation.h; sourceTree = "<group>"; };
+		75FCDC751D503E90003A054B /* PZAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PZAnnotation.m; sourceTree = "<group>"; };
+		75FCDC771D508494003A054B /* pay_way_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay_way_selected.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +108,15 @@
 		75291F641D47115B00E9B12C /* PZLocation */ = {
 			isa = PBXGroup;
 			children = (
+				75FCDC771D508494003A054B /* pay_way_selected.png */,
 				75291F681D47115B00E9B12C /* AppDelegate.h */,
 				75291F691D47115B00E9B12C /* AppDelegate.m */,
-				75291F6B1D47115B00E9B12C /* ViewController.h */,
-				75291F6C1D47115B00E9B12C /* ViewController.m */,
-				75291F6E1D47115B00E9B12C /* Main.storyboard */,
+				75291F981D4711C000E9B12C /* PZMainViewController.h */,
+				75291F991D4711C000E9B12C /* PZMainViewController.m */,
+				75FCDC701D503E0E003A054B /* PZMapViewController.h */,
+				75FCDC711D503E0E003A054B /* PZMapViewController.m */,
+				75FCDC741D503E90003A054B /* PZAnnotation.h */,
+				75FCDC751D503E90003A054B /* PZAnnotation.m */,
 				75291F711D47115B00E9B12C /* Assets.xcassets */,
 				75291F731D47115B00E9B12C /* LaunchScreen.storyboard */,
 				75291F761D47115B00E9B12C /* Info.plist */,
@@ -118,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				75291F661D47115B00E9B12C /* main.m */,
+				75291F9B1D47124000E9B12C /* PZHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,6 +219,7 @@
 				TargetAttributes = {
 					75291F611D47115B00E9B12C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = KU273HL36V;
 					};
 					75291F7A1D47115B00E9B12C = {
 						CreatedOnToolsVersion = 7.3;
@@ -244,8 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				75291F751D47115B00E9B12C /* LaunchScreen.storyboard in Resources */,
+				75FCDC781D508494003A054B /* pay_way_selected.png in Resources */,
 				75291F721D47115B00E9B12C /* Assets.xcassets in Resources */,
-				75291F701D47115B00E9B12C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75291F6D1D47115B00E9B12C /* ViewController.m in Sources */,
+				75291F9A1D4711C000E9B12C /* PZMainViewController.m in Sources */,
 				75291F6A1D47115B00E9B12C /* AppDelegate.m in Sources */,
 				75291F671D47115B00E9B12C /* main.m in Sources */,
+				75FCDC721D503E0E003A054B /* PZMapViewController.m in Sources */,
+				75FCDC761D503E90003A054B /* PZAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +323,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75291F6E1D47115B00E9B12C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75291F6F1D47115B00E9B12C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		75291F731D47115B00E9B12C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -403,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -415,10 +422,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = PZLocation/PZHeader.pch;
 				INFOPLIST_FILE = PZLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhaopeng.PZLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +440,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = PZLocation/PZHeader.pch;
 				INFOPLIST_FILE = PZLocation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhaopeng.PZLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 			};
 			name = Release;
 		};
@@ -498,6 +519,7 @@
 				75291F911D47115B00E9B12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75291F921D47115B00E9B12C /* Build configuration list for PBXNativeTarget "PZLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +528,7 @@
 				75291F941D47115B00E9B12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75291F951D47115B00E9B12C /* Build configuration list for PBXNativeTarget "PZLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +537,7 @@
 				75291F971D47115B00E9B12C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
