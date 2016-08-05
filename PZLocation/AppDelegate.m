@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PZMainViewController.h"
 #import "PZMapViewController.h"
+#import "PZViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    PZMapViewController *main = [[PZMapViewController alloc] init];
+    PZViewController *main = [[PZViewController alloc] init];
     
     self.window.rootViewController = main;
     

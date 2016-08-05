@@ -15,15 +15,25 @@
     
     CLLocationManager *_locationManager;
     MKMapView *_mapView;
-    CLGeocoder *_geocoder;
-    PZAnnotation *annotation1;
+    
+    
 
 }
 
+@property (nonatomic, strong) CLGeocoder *geocoder;
 
 @end
 
 @implementation PZMapViewController
+
+- (CLGeocoder *)geocoder{
+
+    if (!_geocoder) {
+        _geocoder = [CLGeocoder new];
+    }
+    
+    return _geocoder;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -65,44 +75,61 @@
 - (void) addAnnotationWithUserLocation:(MKUserLocation *)userLocation{
     
     
-    CLLocation *location = userLocation.location;
+//    CLLocation *location = userLocation.location;
     
-    CLLocationCoordinate2D coordinate = location.coordinate;
+//    CLLocationCoordinate2D coordinate = location.coordinate;
     
     
 
-    CLLocationCoordinate2D location1 = CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude);
+    CLLocationCoordinate2D location1 = CLLocationCoordinate2DMake(39.87, 116.45);
     
-    annotation1 = [[PZAnnotation alloc] init];
+//    [_mapView removeOverlays:_mapView.overlays];
+//    [_mapView removeAnnotations:_mapView.annotations];
     
-    annotation1.title = userLocation.title;
     
-    annotation1.subtitle = userLocation.subtitle;
+    PZAnnotation *annotation1 = [[PZAnnotation alloc] init];
     
-    annotation1.image = [UIImage imageNamed:@"pay_way_selected"];
+    annotation1.title = @"北京";
+    
+    annotation1.subtitle = @"北京欢迎你";
+    
+    annotation1.image = [UIImage imageNamed:@"datou"];
+
     
     annotation1.coordinate = location1;
     
-    [self getAddressByLatitude:coordinate.latitude longitude:coordinate.longitude];
     
-    [_mapView addAnnotation:annotation1];
+    [_mapView addAnnotation:(id)annotation1];
     
 }
 
-- (void) getAddressByLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude{
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
-    
-    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+    if ([annotation isKindOfClass:[PZAnnotation class]]) {
         
-        CLPlacemark *placemark = [placemarks firstObject];
+        static NSString *key1 = @"AnnotationKey1";
         
-        annotation1.title = [placemark.addressDictionary objectForKey:@"City"];
+        MKAnnotationView *annotatrionView = [_mapView dequeueReusableAnnotationViewWithIdentifier:key1];
         
-    }];
+        if (!annotatrionView) {
+            annotatrionView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:key1];
+            annotatrionView.canShowCallout = YES;
+            annotatrionView.calloutOffset = CGPointMake(0, 1);
+            annotatrionView.leftCalloutAccessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"datou"]];
+        }
+        
+        annotatrionView.annotation = annotation;
+        
+        annotatrionView.image = ((PZAnnotation *)annotation).image;
+        
+        return annotatrionView;
+        
+    } else {
+        
+        return nil;
     
-    
-    
+    }
+
 }
 
 
@@ -114,6 +141,12 @@
 
     [self addAnnotationWithUserLocation:userLocation];
 
+}
+
+- (void)actionViewWithText:(NSString *)text{
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:text delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alertView show];
 }
 
 - (void)didReceiveMemoryWarning {
